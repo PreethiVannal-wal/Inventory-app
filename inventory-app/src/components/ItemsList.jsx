@@ -61,7 +61,9 @@ const ItemsList = () => {
     }
 
     const addItem = (title, imageUrl,quantity) => {
-        setItemsList([...itemsList, {id:itemsList.length+1, name:title, imageUrl:imageUrl, quantity: quantity}]);
+        if(title>0 && imageUrl>0 && quantity>0){
+            setItemsList([...itemsList, {id:itemsList.length+1, name:title, imageUrl:imageUrl, quantity: quantity}]);
+        }
         setIsModalOpen(false);
     }
 
