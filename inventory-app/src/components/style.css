@@ -39,3 +39,15 @@
     font-size: 10px;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.add-button{
+    margin-left: 600px;
+    background-color:blue;
+    width: 150px;
+    color: white;
+    border-style: none;
+    margin-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 18px;
+}

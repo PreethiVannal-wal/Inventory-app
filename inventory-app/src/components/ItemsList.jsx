@@ -94,7 +94,7 @@ const ItemsList = () => {
                 })}
             </Row>
             <Row>
-                <button onClick={handleForm}>Add new item</button>
+                <button onClick={handleForm} className="add-button">Add new item</button>
                 {isModalOpen && (
                     <ModalForm onAdding={addItem}/>
                 )}
