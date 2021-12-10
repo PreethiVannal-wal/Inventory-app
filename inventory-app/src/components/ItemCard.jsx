@@ -17,6 +17,9 @@ const ItemCard = ({id, name, quantity, imageUrl,onDeleting, updateItem}) => {
         updateItem(id,title, quantity);
         setUpdateFormOpen(false);
     }
+    const closeModal = () => {
+        setUpdateFormOpen(false);
+    }
     return(
         <Col>
             <Card className="item-card">
@@ -40,7 +43,7 @@ const ItemCard = ({id, name, quantity, imageUrl,onDeleting, updateItem}) => {
                 </CardBody>
             </Card>
             {updateFormOpen && (
-                <UpdateForm name ={name} quantity = {quantity} onUpdate={updatingItem}/>
+                <UpdateForm name ={name} quantity = {quantity} onUpdate={updatingItem} onClosingModal={closeModal}/>
             )}
         </Col>
     );

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
-const UpdateForm = ({name, quantity,onUpdate}) => {
+const UpdateForm = ({name, quantity,onUpdate,onClosingModal}) => {
     const [inputs, setInputs] = useState({name: name, quantity: quantity});
     const handleChange = (e) => {
         const prop_name = e.target.name;
@@ -11,9 +11,10 @@ const UpdateForm = ({name, quantity,onUpdate}) => {
         e.preventDefault();
         onUpdate(inputs.name, inputs.quantity);
     }
+    
     return (
         <Modal isOpen>
-            <ModalHeader className="form-heading">Update the Item</ModalHeader>
+            <ModalHeader toggle={onClosingModal}className="form-heading">Update the Item</ModalHeader>
             <ModalBody>
                 <form>
                     <div className="inputs">
