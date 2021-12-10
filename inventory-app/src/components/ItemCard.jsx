@@ -1,4 +1,4 @@
-import {Col, CardGroup, Card, CardImg, CardBody, CardTitle, CardText,Button} from 'reactstrap';
+import {Col, Card, CardImg, CardBody, CardTitle, CardText,Button} from 'reactstrap';
 import {useState} from 'react';
 import UpdateForm from './UpdateForm';
 import './style.css';
@@ -26,15 +26,17 @@ const ItemCard = ({id, name, quantity, imageUrl,onDeleting, updateItem}) => {
                     src={imageUrl}
                     width="100%"
                 />
-                <CardBody>
-                    <CardTitle tag="h4">
+                <CardBody className="card-body">
+                    <CardTitle tag="h4" className="card-heading">
                         {name}
                     </CardTitle>
-                    <CardText>
+                    <CardText className="card-text">
                         Stock Available: {quantity}
                     </CardText>
-                    <Button onClick = {EditingItem}>Update</Button>
-                    <Button onClick = {deleteItem}>Delete</Button>
+                    <div className="card-buttons">
+                        <Button onClick = {EditingItem} className="card-button" style ={{marginRight:110}}>Update</Button>
+                        <Button onClick = {deleteItem} className="card-button">Delete</Button>
+                    </div>
                 </CardBody>
             </Card>
             {updateFormOpen && (
