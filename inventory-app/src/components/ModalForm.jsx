@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import {Modal, ModalHeader, ModalBody} from 'reactstrap';
-const ModalForm = ({onAdding}) => {
+import {Modal, ModalHeader, ModalBody, ModalFooter, Button} from 'reactstrap';
+const ModalForm = ({onAdding, onClosingModal}) => {
     const [inputs, setInputs] = useState({});
 
     const handleChange = (e) => {
@@ -34,6 +34,13 @@ const ModalForm = ({onAdding}) => {
                 </div>
             </form>
         </ModalBody>
+        <ModalFooter>
+            <Button color="primary"
+                onClick={onClosingModal}
+            >
+                Cancel
+            </Button>
+        </ModalFooter>
     </Modal>
     )
 }

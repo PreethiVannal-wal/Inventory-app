@@ -79,6 +79,10 @@ const ItemsList = () => {
             }
         });
     }
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    }
     return(
         <Container>
             <Row md="4" sm="2" xs="1">
@@ -96,7 +100,7 @@ const ItemsList = () => {
             <Row>
                 <button onClick={handleForm} className="add-button">Add new item</button>
                 {isModalOpen && (
-                    <ModalForm onAdding={addItem}/>
+                    <ModalForm onAdding={addItem} onClosingModal={closeModal}/>
                 )}
             </Row>
         </Container>
