@@ -51,3 +51,37 @@
     border-radius: 5px;
     font-size: 18px;
 }
+.inputs{
+    margin-bottom: 10px;
+}
+.inputs input{
+    width : 100%;
+    padding: 10px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 2px solid blue;
+}
+.inputs label{
+    color: green;
+    font-size: 18px;
+}
+.form-heading{
+    color: darkred;
+}
+.new-item-parent {
+    display: flex;
+    justify-content: center;
+}
+.new-item {
+    background-color: green;
+    color: white;
+    width: 140px;
+    height: 45px;
+    font-size: 19px;
+    border-radius: 9px;
+    margin-bottom: 20px;
+    border-style: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: bold;
+}

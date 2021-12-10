@@ -13,19 +13,23 @@ const UpdateForm = ({name, quantity,onUpdate}) => {
     }
     return (
         <Modal isOpen>
-            <ModalHeader>Update the Item</ModalHeader>
+            <ModalHeader className="form-heading">Update the Item</ModalHeader>
             <ModalBody>
                 <form>
-                    <label>Enter the title
-                        <input type="text" name="name" value={inputs.name || " "} onChange={handleChange}/>
-                    </label>
-                    <label>No of items available
-                        <input type="number" name="quantity" value={inputs.quantity || " "} onChange={handleChange}/>
-                    </label>
+                    <div className="inputs">
+                        <label>Enter the title
+                            <input type="text" name="name" value={inputs.name || " "} onChange={handleChange}/>
+                        </label>
+                        <label>No of items available
+                            <input type="number" name="quantity" value={inputs.quantity || " "} onChange={handleChange}/>
+                        </label>
+                    </div>
                 </form>
             </ModalBody>
             <ModalFooter>
-                <button type="submit" onClick={updateItem}>Update</button>
+                <div className="new-item-parent">
+                    <button type="submit" onClick={updateItem} className="new-item">Update</button>
+                </div>
             </ModalFooter>
         </Modal>
     )

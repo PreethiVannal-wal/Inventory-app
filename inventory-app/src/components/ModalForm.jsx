@@ -29,8 +29,8 @@ const ModalForm = ({onAdding}) => {
                         <input type="text" name="quantity" value={inputs.quantity || ""} onChange={handleChange}/>
                     </label>
                 </div>
-                <div>
-                    <button>Add</button>
+                <div className="new-item-parent">
+                    <button className="new-item">Add</button>
                 </div>
             </form>
         </ModalBody>
