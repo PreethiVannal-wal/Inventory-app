@@ -21,15 +21,15 @@ const ItemCard = ({id, name, quantity, imageUrl,onDeleting, updateItem}) => {
         setUpdateFormOpen(false);
     }
     return(
-        <Col>
-            <Card className="item-card">
+        <Col xs="12" md="4" lg="3" sm="6" >
+            <Card className='item-card'>
                 <CardImg
                     className="item-image"
                     alt={name}
                     src={imageUrl}
                     width="100%"
                 />
-                <CardBody className="card-body">
+                <CardBody>
                     <CardTitle tag="h4" className="card-heading">
                         {name}
                     </CardTitle>
@@ -37,7 +37,7 @@ const ItemCard = ({id, name, quantity, imageUrl,onDeleting, updateItem}) => {
                         Stock Available: {quantity}
                     </CardText>
                     <div className="card-buttons">
-                        <Button onClick = {EditingItem} className="card-button" style ={{marginRight:110}}>Update</Button>
+                        <Button onClick = {EditingItem} className="card-button" style ={{marginRight:20}}>Update</Button>
                         <Button onClick = {deleteItem} className="card-button">Delete</Button>
                     </div>
                 </CardBody>

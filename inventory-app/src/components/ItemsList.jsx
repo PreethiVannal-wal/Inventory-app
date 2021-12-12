@@ -25,7 +25,7 @@ const ItemsList = () => {
         },
         {
             id:4,
-            name: "Samsung-LED-Television",
+            name: "Samsung Television",
             quantity: 4,
             imageUrl:"https://image.shutterstock.com/image-photo/4k-monitor-isolated-on-white-600w-580917556.jpg"
         },
@@ -77,6 +77,7 @@ const ItemsList = () => {
                 item.quantity =quantity;
                 setItemsList([...itemsList],item);
             }
+            return item;
         });
     }
 
@@ -85,7 +86,7 @@ const ItemsList = () => {
     }
     return(
         <Container>
-            <Row md="4" sm="2" xs="1">
+            <Row className="text-center">
                 {itemsList.map(({id,name, quantity, imageUrl}) => {
                     return <ItemCard 
                                 id={id} 

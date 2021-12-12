@@ -8,5 +8,7 @@
   margin-bottom: 35px;
   padding: 10px;
 }
-
-
+.App {
+  width: 100vw;
+  text-align: center;
+}

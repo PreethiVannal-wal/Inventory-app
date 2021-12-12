@@ -2,7 +2,6 @@ import { useState } from 'react';
 import {Modal, ModalHeader, ModalBody, ModalFooter, Button} from 'reactstrap';
 const ModalForm = ({onAdding, onClosingModal}) => {
     const [inputs, setInputs] = useState({});
-
     const handleChange = (e) => {
         const prop_name = e.target.name;
         const prop_value = e.target.value;
